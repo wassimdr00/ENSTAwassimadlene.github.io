@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>
+      ENSTA 
+    </title>
+
+   <style>
+    p{
+      display: inline-block;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightgray;
+    }
+    .one {
+      background-color: rgb(115, 3, 115);
+      height:70px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed; 
+      top: 0;
+      z-index: 100;
+    }
+    .menu{
+      height: 30px;
+      width: 30px;
+      margin-right: 300px;
+      display: inline-block;
+      margin-left: 30px;
+    }
+    .menu:hover{
+      cursor: pointer;
+    }
+    .ensta_logo {
+      height: 50px;
+      width: 50px;
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 30px;
+    }
+    .ensta:hover{
+      cursor: pointer;
+    }
+    .welcome {
+      color: rgb(255, 255, 255);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 50px;
+      margin: 0;
+      display: inline-block;
+      margin-right: 125px;
+      margin-left: 25px;
+      transition: 0.15s;
+    }
+    .welcome:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 21px;
+      color: rgb(200, 200, 200);
+    }
+    .ensta{
+      margin-left: 50px;
+      font-family: arial;
+    }
+    .ensta:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: (default+1px);
+      color: rgb(20, 20, 20);
+    }
+
+    .title_text{
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 45px;
+      color: white;
+      border: none;
+      padding: 10px;
+      background-color: rgba(184, 114, 39, 0.5);
+      width: 550px;
+      position: relative;
+      z-index: 1;
+    }
+    .title_photo {
+      margin-top: 20px;
+      background-image: url('pic/bg3.jpg');
+      background-size: cover;        
+      background-position: center;  
+      background-repeat: no-repeat;
+      height: 250px; 
+      width: 100%;    
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: left;
+      color: white;                       
+      position: relative;
+      overflow: hidden;
+      padding-left: 80px;
+    }
+    .title_photo > * {
+      position: relative;
+      z-index: 1;
+    }
+    .title_photo::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      filter: blur(6px);
+      transform: scale(1.1);
+      z-index: 0;
+    }
+
+    .title{
+      font-weight: bold;
+      font-family: arial;
+      font-size: 35px;
+      padding: 10px;
+    }
+    .text1{
+      font-size: 20px;
+      line-height: 25px;
+      font-family: arial;
+      font-weight: bold;
+      text-align: center;
+      width:900px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .diss1{
+      margin-top: 46px;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+    .diss{
+      margin-top: 0px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+    .photo_holder{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      border-bottom: 2px solid gray;
+      padding-bottom: 10px;
+      margin-bottom:50px;
+    }
+    .photo1{
+      display:inline-block;
+      width: 600px;
+      height: 350px;
+      margin-left: 20px;
+    }
+    .photo2{
+      display:inline-block;
+      width: 600px;
+      height: 350px;
+      margin-left: 15px;
+      margin-top: 0;
+    }
+    .photo5{
+      display:inline-block;
+      width: 300px;
+      height: auto;
+      margin-left: 20px;
+      margin-top: 50px;
+    }
+    .la5ra{
+      display: flex;
+      align-items: center;
+      height: auto;
+      border-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .dropdown a:hover {
+      background-color: rgb(115, 3, 115);
+      color: white;
+    }
+    #menu-toggle:checked + .dropdown {
+      display: block;
+    }
+    .menu-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Hidden by default */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .dropdown {
+      display: block;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    #menu-toggle:checked + .dropdown {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 40px 60px 20px;
+      font-family: Arial, sans-serif;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 30px;
+    }
+    .footer-section {
+      flex: 1;
+      min-width: 220px;
+    }
+    .footer-section h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section li,
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .footer-section a:hover {
+      color: #4cd964; /* green hover like the image */
+    }
+
+    .footer-line {
+      width: 80%;
+      height: 2px;
+      background-color: #4cd964;
+      border: none;
+      margin: 8px 0 15px 0;
+    }
+
+    .footer-logo {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+
+    .footer-section hr {
+      width: 80%;
+      border: 1px solid #4cd964;
+      margin-top: 15px;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #888;
+      font-size: 13px;
+    }
+
+    .footer-bottom a {
+      color: #4cd964;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-socials a {
+      color: #4cd964;
+      margin-left: 15px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .footer-socials a:hover {
+      color: white;
+    }
+
+
+   </style>
+  
+  </head>
+  <body>
+    <div class="one">
+      <div class="menu-container">
+        <label for="menu-toggle">
+          <img src="pic/list.png" class="menu">
+        </label>
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <div class="dropdown">
+          <a href="st.html">ST</a>
+          <a href="mi.html">MI</a>
+          <a href="clubs.html">Club</a>
+          <a href="about_us.html">About Us</a>
+        </div>
+      </div>
+      <p class="welcome">WELCOME TO ENSTA WEBSITE</p>
+      <p class="ensta">Higher School of Advanced Technologies</p>
+      <img src="pic/ensta_logo.png" class="ensta_logo">
+    </div>
+    <div class="diss1">
+      <div class="title_photo">
+        <p class="title_text">
+          Higher School of Advanced Technologies E.N.S.T.A
+        </p>
+      </div>
+    </div>
+    <div class="diss">
+      <p class="text1">
+      Higher School of Advanced technologies are divided into two departments: ST in Beb l'Oued and MI in Dergana. The education system is a five-year engineering program: two preparatory years and three years of specialization. The ST specializations comprise 14 and 2 MI.</p>
+      <p class="text1">
+      This school was created in 2022, following the dissolution of the National Higher School of Technology and the Higher School of Applied Sciences in Algiers.
+       </p>
+    </div>
+    <div photo="photo_holder">
+      <img src="pic/ensta_pic3.jpg" class="photo1">
+      <img src="pic/ensta_pic4.jpg" class="photo2">
+    </div>
+
+
+
+
+
+    <div class="la5ra">
+        <img src="pic/ensta_pic2.jpg" class="photo5">
+      <div style=" display: inline-block;">
+        <div class="diss1">
+          <p class="title">
+            how to access to our school
+          </p>
+        </div>
+        <div class="diss">
+          <p class="text1">
+          Admission to the school is subject to certain conditions, depending on the program. Students who meet these conditions are entitled to admission. A unique feature of the school is that students can join the second or third cycle of postgraduate studies without having previously studied at the same institution, especially if there are specializations offered exclusively at that school
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <img src="pic/ensta_logo.png" alt="ENSTA Logo" class="footer-logo">
+          <p>Ecole Nationale Supérieure des Technologies Avancées</p>
+          <p>+213 (0)554 90 99 13</p>
+          <p>+213 (0)697 82 51 00</p>
+          <p><a href="mailto:contact@ensta.edu.dz">contact@ensta.edu.dz</a></p>
+          <hr>
+        </div>
+
+        <div class="footer-section">
+          <h3>School</h3>
+          <hr class="footer-line">
+          <ul>
+            <li><a href="#">Présentation of school </a></li>
+            <li><a href="#">Plan of school </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>used links</h3>
+          <hr class="footer-line">
+          <ul>
+            <li><a href="https://progres.mesrs.dz/webfve/login.xhtml">PROGRES-FVE</a></li>
+            <li><a href="https://chatgpt.com">ChatGPT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright All Right Reserved 2025 <a href="#">ENSTA</a></p>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

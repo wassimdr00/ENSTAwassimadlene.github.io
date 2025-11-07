@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENSTA – ST Department</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  padding: 40px;
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== ST Access Section ===== */
+.st-access {
+  --ink: #222;
+  --muted: #666;
+  --red: #b64040;
+  --line: #dedede;
+  --line2: #bbbbbb;
+  color: var(--ink);
+  background: #f5f5f5;
+  padding: 36px;
+  border-radius: 12px;
+}
+
+.st-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.st-access h2 {
+  margin: 0 0 14px 0;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.st-access h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 3px;
+  background: var(--red);
+}
+
+.st-access p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.st-access__dl a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+.st-right h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.st-sub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead th {
+  background: #fafafa;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line2);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  color: #222;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .st-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<section class="st-access">
+  <div class="st-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="st-left">
+      <h2>Access Conditions</h2>
+
+      <p>
+        Access to the Foundation Program in Science and Technology at the
+        National Higher School of Advanced Technologies (ENSTA) is reserved for
+        candidates holding the following Baccalaureate streams: Mathematics,
+        Technical Mathematics, and Experimental Sciences, in accordance with the
+        criteria defined in the Baccalaureate Guide for each academic year.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="st-right">
+      <h3>Minimum BAC Averages for Admission to ENSTA</h3>
+      <div class="st-sub">Foundation Program in Science and Technology (ST)</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>BAC 2025</th>
+            <th>BAC 2024</th>
+            <th>BAC 2023</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Mathematics</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+
+          <tr>
+            <td>Experimental Sciences</td>
+            <td class="num">17.15</td>
+            <td class="num">16.76</td>
+            <td class="num">16.08</td>
+          </tr>
+
+          <tr>
+            <td>Technical Mathematics</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ENSTA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightgray;
+      margin-bottom: 100px;
+    }
+
+    .one {
+      background-color: rgb(115, 3, 115);
+      height: 70px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed; 
+      top: 0;
+      z-index: 100;
+    }
+
+    .menu {
+      height: 30px;
+      width: 30px;
+      margin-right: 300px;
+      display: inline-block;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    .menu-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Hidden by default */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .dropdown {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .dropdown a:hover {
+      background-color: rgb(115, 3, 115);
+      color: white;
+    }
+
+    .welcome {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 125px;
+    }
+
+    .ensta_logo {
+      height: 50px;
+      width: 50px;
+      margin-left: 30px;
+    }
+
+    /* Other existing styles */
+    .diss1, .diss {
+      display: flex;
+      justify-content: center;
+    }
+
+    .title1, .title {
+      font-weight: bold;
+      font-family: arial;
+      font-size: 35px;
+      padding: 10px;
+    }
+
+    .title1 {
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+
+    .text1 {
+      font-size: 20px;
+      line-height: 25px;
+      font-family: arial;
+      font-weight: bold;
+      text-align: center;
+      width: 900px;
+      margin: 20px;
+    }
+
+    .photo_holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid gray;
+      padding-bottom: 10px;
+      margin-bottom: 50px;
+    }
+
+    .photo1, .photo2 {
+      width: 600px;
+      height: 350px;
+      margin: 15px;
+    }
+
+    .la5ra {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="one">
+    <div class="menu-container">
+      <label for="menu-toggle">
+        <img src="pic/list.png" class="menu">
+      </label>
+      <input type="checkbox" id="menu-toggle" style="display:none;">
+      <div class="dropdown">
+        <a href="st.html">ST</a>
+        <a href="mi.html">MI</a>
+        <a href="club.html">Club</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+
+    <p class="welcome">WELCOME TO ENSTA WEBSITE</p>
+    <img src="pic/ensta_logo.png" class="ensta_logo">
+  </div>
+
+  <div class="diss1">
+    <p class="title1">Description</p>
+  </div>
+
+  <div class="diss">
+    <p class="text1">
+      Higher School of Advanced Technologies are divided into two departments: ST in Beb l'Oued and MI in Dergana. The education system is a five-year engineering program: two preparatory years and three years of specialization.
+    </p>
+    <p class="text1">
+      This school was created in 2022, following the dissolution of the National Higher School of Technology and the Higher School of Applied Sciences in Algiers.
+    </p>
+  </div>
+
+  <div class="photo_holder">
+    <img src="pic/ensta_pic3.jpg" class="photo1">
+    <img src="pic/ensta_pic4.jpg" class="photo2">
+  </div>
+
+  <div class="la5ra">
+    <img src="pic/ensta_pic2.jpg" class="photo5">
+    <div>
+      <div class="diss1">
+        <p class="title">How to Access Our School</p>
+      </div>
+      <div class="diss">
+        <p class="text1">
+          Admission to the school is subject to certain conditions depending on the program. A unique feature of the school is that students can join the second or third cycle of postgraduate studies without having previously studied at the same institution.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
